@@ -6,22 +6,25 @@ class ProfileStack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(height: 20,),
-            Container(
-              height: 200,
-              width: 200,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            height: 200,
+            width: 200,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
               color: Colors.blueAccent,
-
-              ),
-            )
-          ],
-        ),
-      )
-    ;
+            ),
+          ),
+          SizedBox(
+            height: 35,
+          ),
+        ],
+      ),
+    );
   }
 }
