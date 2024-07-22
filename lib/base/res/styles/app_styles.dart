@@ -4,6 +4,8 @@ Color primary = const Color(0xFF687daf);
 
 class AppStyles {
   static Color primaryColor = primary;
+  static Color font = Color(0xFFD7D7D7);
+  static Color background = Color(0xFF1A2947);
   static Color textButton = Color.fromARGB(0, 206, 25, 206);
   static Color bgColor = const Color(0xFFeeedf2);
   static Color textColor = const Color(0xFF3b3b3b);
@@ -31,4 +33,8 @@ class AppStyles {
   );
   static TextStyle headLineStyle4 = TextStyle(
       fontSize: 14, fontWeight: FontWeight.w500, color: Colors.grey.shade500);
+  static TextStyle elevatedButton = const TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.w500, color: Colors.white
+  );
 }

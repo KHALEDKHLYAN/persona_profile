@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:personal_profile_app/base/res/styles/app_styles.dart';
+import 'package:personal_profile_app/base/widgets/profile_stack.dart';
+import 'package:personal_profile_app/base/widgets/top_bar.dart';
+import 'package:personal_profile_app/screen/widgets/nav_barbutton.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,40 +9,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppStyles.bgColor,
       drawer: Drawer(),
       body: ListView(
         children: [
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Builder(
-                  builder: (context) => IconButton(
-                    icon: Image.asset(
-                      "assets/icons/navDrawer.png",
-                      height: 50,
-                      width: 34,
-                    ),
-                    onPressed: () => Scaffold.of(context).openDrawer(),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {},
-                  style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(AppStyles.textButton)),
-                  child: Row(children: [
-                    Image.asset(
-                      "assets/icons/whatsapp.png",
-                      height: 50,
-                      width: 35,
-                    ),
-                    Text("Whatsapp")
-                  ]),
-                ),
-              ], 
-          ),
-      )],
+          TopBarWidget(),
+          NavBarButton(),
+          SizedBox(height: 20,),
+          ProfileStack(),
+        ],
       ),
     );
   }
